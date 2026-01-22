@@ -3,12 +3,10 @@ import java.util.Scanner;
 class Grader {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
-        
-        for (int i = 0; i < n; i++) {
-            int grade = scan.nextInt();
+        while (scan.hasNextInt()){
+            int grade = scan.nextInt(); 
             
-            if (grade >= 40) {
+            if (grade >= 40) {                             //Only rounds if 40 or Higher
                 int nextMultiple = ((grade / 5) + 1) * 5;
 
                 if (nextMultiple - grade < 3) {
